@@ -1,18 +1,19 @@
 package test.milorad.yatprojects.network.models;
 
-public abstract class ApiResponse <T> {
+import java.util.List;
+
+public class ProjectsApiResponse {
 
 	private Status STATUS;
-	private T data;
+	private List<NetworkProject> projects;
 
 	public Status getStatus() {
 		return STATUS;
 	}
 
-	public T getData() {
-		return data;
+	public List<NetworkProject> getProjects() {
+		return projects;
 	}
-
 
 	public enum Status {
 		OK,

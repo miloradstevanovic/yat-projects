@@ -26,7 +26,7 @@ public class NetworkProject {
 	private String announcement;
 	private String status;
 	private String privacyEnabled;
-	private String boardData;
+	private Object boardData;
 	private String defaultPrivacy;
 	@SerializedName("tasks-start-page")
 	private String tasksStartPage;
@@ -118,7 +118,7 @@ public class NetworkProject {
 		return privacyEnabled;
 	}
 
-	public String getBoardData() {
+	public Object getBoardData() {
 		return boardData;
 	}
 
