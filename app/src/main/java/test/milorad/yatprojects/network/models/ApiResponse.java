@@ -13,8 +13,13 @@ public abstract class ApiResponse <T> {
 		return data;
 	}
 
-	enum Status {
+
+	public enum Status {
 		OK,
-		ERROR
+		ERROR;
+
+		public boolean isSuccess() {
+			return this == OK;
+		}
 	}
 }
