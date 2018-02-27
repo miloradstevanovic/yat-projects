@@ -29,10 +29,10 @@ public class DefaultRemoteService implements RemoteService {
 			}
 
 			//If the data is null something went terribly wrong.
-			if (listApiResponse.getData() == null) {
+			if (listApiResponse.getProjects() == null) {
 				throw new ApiError(new Exception("Null projects received."));
 			}
-			return mapToProjects(listApiResponse.getData());
+			return mapToProjects(listApiResponse.getProjects());
 		});
 		//TODO Map all network errors to an ApiError equivalent
 		//TODO Add remote logging
