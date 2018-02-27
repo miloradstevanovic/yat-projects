@@ -11,4 +11,16 @@ public final class Project {
 		this.logoUrl = logoUrl;
 		this.description = description;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getLogoUrl() {
+		return logoUrl;
+	}
+
+	public String getDescription() {
+		return description;
+	}
 }
