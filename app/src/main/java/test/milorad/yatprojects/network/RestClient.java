@@ -26,6 +26,7 @@ public enum RestClient {
 	private static final String BASE_URL = "https://yat.teamwork.com";
 	private static final String CLIENT_ID = "...";
 
+	//OkHttpClient with the interceptor that adds the necessary headers
 	private OkHttpClient client =
 			new OkHttpClient.Builder()
 					.addInterceptor(chain -> {

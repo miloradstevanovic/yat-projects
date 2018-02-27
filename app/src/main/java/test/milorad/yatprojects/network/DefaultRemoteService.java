@@ -8,6 +8,9 @@ import test.milorad.yatprojects.core.contracts.RemoteService;
 import test.milorad.yatprojects.core.models.Project;
 import test.milorad.yatprojects.network.models.NetworkProject;
 
+/**
+ * Default remote service implementation.
+ */
 public class DefaultRemoteService implements RemoteService {
 
 	private ProjectApi projectApi;
@@ -18,11 +21,18 @@ public class DefaultRemoteService implements RemoteService {
 
 	@Override
 	public Single<List<Project>> getProjects() {
-		return projectApi.projects().map(project -> {
-			if (project.getData() == null) {
+		return projectApi.projects().map(listApiResponse -> {
+
+			//If the Status is not ok throw
+			if (!listApiResponse.getStatus().isSuccess()) {
+				throw new ApiError(new Exception("Request failed."));
+			}
+
+			//If the data is null something went terribly wrong.
+			if (listApiResponse.getData() == null) {
 				throw new ApiError(new Exception("Null projects received."));
 			}
-			return mapToProjects(project.getData());
+			return mapToProjects(listApiResponse.getData());
 		});
 		//TODO Map all network errors to an ApiError equivalent
 		//TODO Add remote logging
@@ -35,5 +45,4 @@ public class DefaultRemoteService implements RemoteService {
 		}
 		return projects;
 	}
-
 }
