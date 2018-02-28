@@ -28,4 +28,8 @@ public class ProjectViewModel {
 	public void goToDetailScreen() {
 		navigator.goToProjectDetail(project);
 	}
+
+	public Project getProject() {
+		return project;
+	}
 }
