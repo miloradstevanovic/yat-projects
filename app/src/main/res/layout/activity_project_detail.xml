@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="test.milorad.yatprojects.ui.screens.project.detail.ProjectDetailViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/projectLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:visibility="@{viewModel.showLogo}"
+                bind:url="@{viewModel.logoUrl}" />
+
+            <TextView
+                android:id="@+id/projectName"
+                style="@style/ProjectName"
+                android:text="@{viewModel.name}"
+                bind:layout_constraintTop_toBottomOf="@id/projectLogo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@{viewModel.description}"
+                bind:layout_constraintTop_toBottomOf="@id/projectName" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</layout>
