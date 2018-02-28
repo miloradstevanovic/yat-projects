@@ -4,7 +4,6 @@ import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.widget.Toast;
 
@@ -14,6 +13,7 @@ import test.milorad.yatprojects.R;
 import test.milorad.yatprojects.core.contracts.Navigator;
 import test.milorad.yatprojects.core.models.Project;
 import test.milorad.yatprojects.databinding.ActivityProjectListBinding;
+import test.milorad.yatprojects.ui.screens.project.detail.ProjectDetailActivity;
 import test.milorad.yatprojects.utils.DependencyLocator;
 
 public class ProjectListActivity extends AppCompatActivity implements ProjectListView, Navigator {
@@ -65,6 +65,6 @@ public class ProjectListActivity extends AppCompatActivity implements ProjectLis
 
 	@Override
 	public void goToProjectDetail(@NonNull Project project) {
-
+		ProjectDetailActivity.start(this, project);
 	}
 }
