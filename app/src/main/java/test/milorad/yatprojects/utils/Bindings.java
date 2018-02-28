@@ -1,15 +1,11 @@
 package test.milorad.yatprojects.utils;
 
 
-import com.bumptech.glide.Glide;
-
 import android.databinding.BindingAdapter;
 import android.databinding.BindingConversion;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.widget.ImageView;
-
-import test.milorad.yatprojects.R;
 
 /**
  * Bindings for custom xml attributes using data binding
@@ -39,7 +35,7 @@ public class Bindings {
 	 */
 	@BindingAdapter("url")
 	public static void setImageUrl(final ImageView imageView, String url) {
-		Glide.with(imageView.getContext()).load(url).placeholder(R.drawable.ic_launcher_foreground).into(imageView);
+		DependencyLocator.getImageLoader().load(url, imageView);
 	}
 
 	/**
