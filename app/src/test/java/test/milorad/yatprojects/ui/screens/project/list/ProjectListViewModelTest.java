@@ -107,9 +107,9 @@ public class ProjectListViewModelTest extends ImmediateSchedulersTest {
 
 	private List<Project> getDummyProjects() {
 		List<Project> projects = new ArrayList<>();
-		projects.add(new Project("", "", ""));
-		projects.add(new Project("", "", ""));
-		projects.add(new Project("", "", ""));
+		projects.add(new Project("name", "tdf", "dsf"));
+		projects.add(new Project("name1", "", "adsfg"));
+		projects.add(new Project("name2", null, "adsfgh"));
 		return projects;
 	}
 
