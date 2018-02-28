@@ -31,7 +31,7 @@ public class DefaultRemoteService implements RemoteService {
 				throw new ApiError(new Exception("Request failed."));
 			}
 
-			//If the data is null something went terribly wrong.
+			//If the project data is null something went terribly wrong.
 			if (listApiResponse.getProjects() == null) {
 				throw new ApiError(new Exception("Null projects received."));
 			}

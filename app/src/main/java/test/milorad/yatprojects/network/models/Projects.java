@@ -7,8 +7,13 @@ public class Projects {
 	private Status STATUS;
 	private List<NetworkProject> projects;
 
+	/**
+	 * Status of the request.
+	 *
+	 * @return The status emitted by the service or Status.ABSENT if null wa received.
+	 */
 	public Status getStatus() {
-		return STATUS;
+		return STATUS == null ? Status.ABSENT : STATUS;
 	}
 
 	public List<NetworkProject> getProjects() {
@@ -17,7 +22,8 @@ public class Projects {
 
 	public enum Status {
 		OK,
-		ERROR;
+		ERROR,
+		ABSENT;
 
 		public boolean isSuccess() {
 			return this == OK;
