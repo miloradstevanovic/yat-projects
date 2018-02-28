@@ -26,4 +26,7 @@ public class ProjectDetailViewModel {
 		return project.getDescription();
 	}
 
+	public boolean getShowLogo() {
+		return getLogoUrl() != null && !getLogoUrl().isEmpty();
+	}
 }

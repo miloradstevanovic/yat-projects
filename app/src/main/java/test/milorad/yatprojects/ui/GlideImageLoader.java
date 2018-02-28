@@ -5,7 +5,6 @@ import com.bumptech.glide.Glide;
 
 import android.widget.ImageView;
 
-import test.milorad.yatprojects.R;
 import test.milorad.yatprojects.core.contracts.ImageLoader;
 
 /**
@@ -16,6 +15,6 @@ public enum GlideImageLoader implements ImageLoader {
 
 	@Override
 	public void load(String url, ImageView imageView) {
-		Glide.with(imageView.getContext()).load(url).placeholder(R.drawable.ic_launcher_foreground).into(imageView);
+		Glide.with(imageView.getContext()).load(url).into(imageView);
 	}
 }
