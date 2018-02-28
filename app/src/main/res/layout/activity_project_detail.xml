@@ -9,36 +9,34 @@
             type="test.milorad.yatprojects.ui.screens.project.detail.ProjectDetailViewModel" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <ImageView
-            android:id="@+id/projectLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            bind:url="@{viewModel.logoUrl}" />
-
-        <TextView
-            android:id="@+id/projectName"
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:lines="1"
-            android:padding="5dp"
-            android:paddingBottom="5dp"
-            android:text="@{viewModel.name}"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            bind:layout_constraintTop_toBottomOf="@id/projectLogo" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.description}"
-            bind:layout_constraintTop_toBottomOf="@id/projectName" />
-    </android.support.constraint.ConstraintLayout>
+            <ImageView
+                android:id="@+id/projectLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:visibility="@{viewModel.showLogo}"
+                bind:url="@{viewModel.logoUrl}" />
+
+            <TextView
+                android:id="@+id/projectName"
+                style="@style/ProjectName"
+                android:text="@{viewModel.name}"
+                bind:layout_constraintTop_toBottomOf="@id/projectLogo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@{viewModel.description}"
+                bind:layout_constraintTop_toBottomOf="@id/projectName" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 </layout>
