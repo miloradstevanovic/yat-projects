@@ -25,6 +25,10 @@ public class ProjectViewModel {
 		return project.getDescription();
 	}
 
+	public boolean getShowLogo() {
+		return getLogoUrl() != null && !getLogoUrl().isEmpty();
+	}
+
 	public void goToDetailScreen() {
 		navigator.goToProjectDetail(project);
 	}

@@ -17,7 +17,6 @@ import test.milorad.yatprojects.ui.screens.project.list.ProjectListModel;
 public class DependencyLocator {
 
 	private DependencyLocator() {
-
 	}
 
 	public static ProjectListModel getProjectListModel() {

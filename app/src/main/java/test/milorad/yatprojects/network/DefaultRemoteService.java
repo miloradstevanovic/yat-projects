@@ -39,11 +39,13 @@ public class DefaultRemoteService implements RemoteService {
 		});
 	}
 
-	private List<Project> mapToProjects(List<NetworkProject> data) {
-		List<Project> projects = new ArrayList<>(data.size());
-		for (NetworkProject networkProject : data) {
+	private List<Project> mapToProjects(List<NetworkProject> networkProjects) {
+		List<Project> projects = new ArrayList<>(networkProjects.size());
+
+		for (NetworkProject networkProject : networkProjects) {
 			projects.add(new Project(networkProject.getName(), networkProject.getLogo(), networkProject.getDescription()));
 		}
+
 		return projects;
 	}
 }

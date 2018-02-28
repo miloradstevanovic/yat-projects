@@ -10,7 +10,7 @@ import test.milorad.yatprojects.ui.ViewModel;
 public class ProjectListModel extends ViewModel {
 
 	private RemoteProjectRepository remoteProjectRepository;
-	//TODO Add support for caching with a local RemoteProjectRepository database
+	//TODO Add support for caching with a local ProjectRepository database
 
 	public ProjectListModel(RemoteProjectRepository remoteProjectRepository) {
 		this.remoteProjectRepository = remoteProjectRepository;

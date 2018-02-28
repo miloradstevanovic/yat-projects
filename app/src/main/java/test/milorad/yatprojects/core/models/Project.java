@@ -4,6 +4,9 @@ package test.milorad.yatprojects.core.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+/**
+ * Domain model of the Project, TODO expand with more properties
+ */
 public final class Project implements Parcelable {
 
 	private final String name;
