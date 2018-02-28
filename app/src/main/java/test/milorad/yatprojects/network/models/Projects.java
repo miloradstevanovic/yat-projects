@@ -2,7 +2,7 @@ package test.milorad.yatprojects.network.models;
 
 import java.util.List;
 
-public class ProjectsApiResponse {
+public class Projects {
 
 	private Status STATUS;
 	private List<NetworkProject> projects;

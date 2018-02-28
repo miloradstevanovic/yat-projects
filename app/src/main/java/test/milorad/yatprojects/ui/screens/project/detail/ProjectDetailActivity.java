@@ -10,8 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import test.milorad.yatprojects.R;
 import test.milorad.yatprojects.core.models.Project;
 import test.milorad.yatprojects.databinding.ActivityProjectDetailBinding;
-import test.milorad.yatprojects.utils.DependencyLocator;
 
+/**
+ * Project detail page showing basic project data passed through the intent.
+ */
 public class ProjectDetailActivity extends AppCompatActivity {
 
 	private static final String PROJECT = "PROJECT";

@@ -5,6 +5,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public final class Project implements Parcelable {
+
 	private final String name;
 	private final String logoUrl;
 	private final String description;

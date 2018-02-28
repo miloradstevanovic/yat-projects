@@ -18,7 +18,9 @@ public enum RestClient {
 	INSTANCE;
 
 	private static final String BASE_URL = "https://yat.teamwork.com";
-	public static final String BASIC_AUTH_HEADER = "Basic dHdwX1RFYkJYR0NudmwySGZ2WFdma0xVbHp4OTJlM1Q6WA==";
+
+	//Hardcoded for this use case
+	private static final String BASIC_AUTH_HEADER = "Basic dHdwX1RFYkJYR0NudmwySGZ2WFdma0xVbHp4OTJlM1Q6WA==";
 
 	//OkHttpClient with the interceptor that adds the necessary headers
 	private OkHttpClient client =
