@@ -10,6 +10,9 @@ import test.milorad.yatprojects.network.models.NetworkProject;
 
 /**
  * Default remote service implementation.
+ *
+ * TODO Map all network errors to an ApiError equivalent
+ * TODO Add remote logging
  */
 public class DefaultRemoteService implements RemoteService {
 
@@ -34,8 +37,6 @@ public class DefaultRemoteService implements RemoteService {
 			}
 			return mapToProjects(listApiResponse.getProjects());
 		});
-		//TODO Map all network errors to an ApiError equivalent
-		//TODO Add remote logging
 	}
 
 	private List<Project> mapToProjects(List<NetworkProject> data) {

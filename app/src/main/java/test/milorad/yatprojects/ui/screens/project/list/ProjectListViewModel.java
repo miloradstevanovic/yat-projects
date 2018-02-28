@@ -12,6 +12,9 @@ import test.milorad.yatprojects.ui.ViewModel;
 import test.milorad.yatprojects.utils.ResourceProvider;
 import test.milorad.yatprojects.utils.RxUtils;
 
+/**
+ * Project list view model to be used with {@link ProjectListView}.
+ */
 public class ProjectListViewModel extends ViewModel {
 
 	//Dependencies

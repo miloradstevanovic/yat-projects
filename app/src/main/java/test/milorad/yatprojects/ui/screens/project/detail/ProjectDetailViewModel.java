@@ -3,7 +3,7 @@ package test.milorad.yatprojects.ui.screens.project.detail;
 import test.milorad.yatprojects.core.models.Project;
 
 /**
- * Simple view model to show the vehicle data passed locally.
+ * Simple view model to show the project data passed locally.
  * At this point it's just a wrapper around {@link Project}.
  */
 public class ProjectDetailViewModel {
